@@ -91,7 +91,6 @@ html {
   position: absolute;
   display: flex;
   overflow: hidden;
-  top: 5;
   pointer-events: none;
   margin-left: 26px;
   width: 348px;

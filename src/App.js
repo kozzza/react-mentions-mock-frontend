@@ -246,7 +246,13 @@ const App = () => {
               onChange={handleChange}
             ></input>
             {mentions.map((mention, i) => (
-              <div key={i} className="mention-container">
+              <div
+                key={i}
+                style={{
+                  top: 5,
+                }}
+                className="mention-container"
+              >
                 <div
                   className="mention"
                   style={{
