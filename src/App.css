@@ -1,38 +1,103 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.header {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.textbox {
+  height: 50px;
+  width: 400px;
+  font-size: 24px;
+  border: 1px solid #171717;
+  border-radius: 25px;
+  margin-right: 25px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.button {
+  height: 60px;
+  width: 150px;
+  border: 1px solid #171717;
+  border-radius: 30px;
+  /* background-color: #171717; */
+  background: rgb(199, 180, 214);
+  background: linear-gradient(
+    45deg,
+    rgba(199, 180, 214, 1) 8%,
+    rgba(215, 236, 233, 1) 40%,
+    rgba(252, 251, 254, 1) 55%,
+    rgba(207, 217, 240, 1) 71%,
+    rgba(242, 222, 240, 1) 81%,
+    rgba(231, 227, 226, 1) 91%,
+    rgba(216, 227, 226, 1) 93%,
+    rgba(172, 209, 251, 1) 98%
+  );
+  border: 2px solid black;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.suggestions {
+  position: absolute;
+  display: flex;
+  width: fit-content;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: white;
+}
+
+.suggestion-container {
+  width: 100%;
+  padding: 4px 10px 4px 10px;
+}
+
+.suggestion-container:hover {
+  background-color: lightgray;
+  color: black;
+}
+
+.highlighted {
+  background-color: lightgray;
+  color: black;
+}
+
+.suggestion {
+  font-size: 18px;
+  padding-bottom: 4px;
+}
+
+.mention-container {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  top: 5;
+  pointer-events: none;
+  margin-left: 26px;
+  width: 348px;
+}
+
+.mention {
+  height: 40px;
+  border-radius: 4px;
 }
