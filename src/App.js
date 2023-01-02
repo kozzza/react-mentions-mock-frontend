@@ -3,9 +3,10 @@ import { useState, useEffect } from "react";
 import ScaleLoader from "react-spinners/ScaleLoader";
 
 const PUBLIC_API_KEY = "DAAEE6C2B76A2B743DF61F4EA7218";
+const base_url = "https://react-mentions-mock.fly.dev";
 
 const refreshData = async () => {
-  const res = await fetch(`http://localhost:8000/regenerate`, {
+  const res = await fetch(`${base_url}/regenerate`, {
     headers: {
       Authorization: `Bearer ${PUBLIC_API_KEY}`,
     },
@@ -15,7 +16,7 @@ const refreshData = async () => {
 };
 
 const search = async (q) => {
-  const res = await fetch(`http://localhost:8000/search?query=${q}`);
+  const res = await fetch(`${base_url}/search?query=${q}`);
   const body = await res.json();
   return body.data;
 };
